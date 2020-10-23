@@ -54,13 +54,15 @@ public class Picture
         sun.moveVertical(100);
         sun.changeSize(80);
         sun.makeVisible();
-        
+      
         countryside = new Square();
         countryside.changeColor("green");
         countryside.moveHorizontal(-500);
         countryside.moveVertical(140);
         countryside.changeSize(1000);
         countryside.makeVisible();
+        
+        sun.slowMoveVertical(-100);
     }
 
     /**
@@ -90,7 +92,6 @@ public class Picture
             roof.changeColor("green");
             sun.changeColor("yellow");
             countryside.changeColor("green");
-            sun.slowMoveVertical(-100);
         }
     }
 }
