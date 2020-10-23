@@ -15,7 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
-
+    private Square countryside;
     /**
      * Constructor for objects of class Picture
      */
@@ -51,9 +51,16 @@ public class Picture
         sun = new Circle();
         sun.changeColor("yellow");
         sun.moveHorizontal(100);
-        sun.moveVertical(-40);
+        sun.moveVertical(100);
         sun.changeSize(80);
         sun.makeVisible();
+        
+        countryside = new Square();
+        countryside.changeColor("green");
+        countryside.moveHorizontal(-500);
+        countryside.moveVertical(140);
+        countryside.changeSize(1000);
+        countryside.makeVisible();
     }
 
     /**
@@ -67,6 +74,7 @@ public class Picture
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
+            countryside.changeColor("black");
         }
     }
 
@@ -81,6 +89,8 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+            countryside.changeColor("green");
+            sun.slowMoveVertical(-100);
         }
     }
 }
